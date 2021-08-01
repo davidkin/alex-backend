@@ -1,0 +1,5 @@
+exports.ROLES = {
+	ADMIN: 'ADMIN',
+	ATTORNEY: 'ATTORNEY',
+	CLIENT : 'CLIENT',
+};
