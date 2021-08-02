@@ -13,7 +13,15 @@ exports.login = async (req, res, next) => {
 		
 		const token = TokenService.createToken(user);
 
-		return res.status(200).json({ message: 'Login Success!', token, user });
+		return res.status(200).json({
+			message: 'Login Success!',
+			token,
+			user: {
+				name: user.name,
+				email,
+				role: user.role
+			}
+		});
 	} catch(err) {
 		next(err);
 	}
